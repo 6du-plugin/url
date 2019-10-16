@@ -28,6 +28,7 @@ module.exports = {
     end = end+begin+2
     prev = js.slice(0, begin)
     mid = eval '('+js.slice(begin, end)+')'
+    mid.url = mid.url or {}
     after = js.slice(end)
 
     for k,li of _PATH
